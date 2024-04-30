@@ -1,0 +1,14 @@
+{
+    "json.schemas": [
+        {
+            "fileMatch": [
+                "*.vc21.json"
+            ],
+            "url": "./vcard2.1_minimal_schema.json"
+        }
+    ],
+    "workbench.colorCustomizations": {
+        "minimap.background": "#00000000",
+        "scrollbar.shadow": "#00000000"
+    }
+}

@@ -1,0 +1,4 @@
+reportlab==4.2.0
+opencv-python==4.9.0.80
+qrcode==7.4.2
+pydantic==2.7.1

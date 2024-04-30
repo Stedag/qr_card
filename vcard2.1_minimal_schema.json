@@ -1,0 +1,198 @@
+{
+    "$defs": {
+        "adr": {
+            "properties": {
+                "type": {
+                    "title": "Type",
+                    "type": "string"
+                },
+                "street": {
+                    "title": "Street",
+                    "type": "string"
+                },
+                "city": {
+                    "title": "City",
+                    "type": "string"
+                },
+                "state": {
+                    "title": "State",
+                    "type": "string"
+                },
+                "zip_code": {
+                    "title": "Zip Code",
+                    "type": "string"
+                },
+                "country": {
+                    "title": "Country",
+                    "type": "string"
+                }
+            },
+            "required": [
+                "type",
+                "street",
+                "city",
+                "state",
+                "zip_code",
+                "country"
+            ],
+            "title": "adr",
+            "type": "object"
+        },
+        "tel": {
+            "properties": {
+                "type": {
+                    "title": "Type",
+                    "type": "string"
+                },
+                "num": {
+                    "title": "Num",
+                    "type": "string"
+                }
+            },
+            "required": [
+                "type",
+                "num"
+            ],
+            "title": "tel",
+            "type": "object"
+        },
+        "vname": {
+            "properties": {
+                "first_name": {
+                    "title": "First Name",
+                    "type": "string"
+                },
+                "middle_name": {
+                    "title": "Middle Name",
+                    "type": "string"
+                },
+                "last_name": {
+                    "title": "Last Name",
+                    "type": "string"
+                },
+                "honorifics": {
+                    "title": "Honorifics",
+                    "type": "string"
+                }
+            },
+            "required": [
+                "first_name",
+                "middle_name",
+                "last_name",
+                "honorifics"
+            ],
+            "title": "vname",
+            "type": "object"
+        }
+    },
+    "properties": {
+        "formatted_name": {
+            "title": "Formatted Name",
+            "type": "string"
+        },
+        "name": {
+            "allOf": [
+                {
+                    "$ref": "#/$defs/vname"
+                }
+            ],
+            "default": {
+                "first_name": "",
+                "middle_name": "",
+                "last_name": "",
+                "honorifics": ""
+            }
+        },
+        "org": {
+            "default": "",
+            "title": "Org",
+            "type": "string"
+        },
+        "title": {
+            "default": "",
+            "title": "Title",
+            "type": "string"
+        },
+        "role": {
+            "default": "",
+            "title": "Role",
+            "type": "string"
+        },
+        "logo": {
+            "default": "",
+            "title": "Logo",
+            "type": "string"
+        },
+        "photo": {
+            "default": "",
+            "title": "Photo",
+            "type": "string"
+        },
+        "tels": {
+            "default": [],
+            "items": {
+                "$ref": "#/$defs/tel"
+            },
+            "title": "Tels",
+            "type": "array"
+        },
+        "adrs": {
+            "default": [],
+            "items": {
+                "$ref": "#/$defs/adr"
+            },
+            "title": "Adrs",
+            "type": "array"
+        },
+        "rev": {
+            "default": "",
+            "title": "Rev",
+            "type": "string"
+        },
+        "email": {
+            "default": "",
+            "title": "Email",
+            "type": "string"
+        },
+        "note": {
+            "default": "",
+            "title": "Note",
+            "type": "string"
+        },
+        "bday": {
+            "default": "",
+            "title": "Bday",
+            "type": "string"
+        },
+        "categories": {
+            "default": "",
+            "title": "Categories",
+            "type": "string"
+        },
+        "geo": {
+            "default": "",
+            "title": "Geo",
+            "type": "string"
+        },
+        "sound": {
+            "default": "",
+            "title": "Sound",
+            "type": "string"
+        },
+        "key": {
+            "default": "",
+            "title": "Key",
+            "type": "string"
+        },
+        "tz": {
+            "default": "",
+            "title": "Tz",
+            "type": "string"
+        }
+    },
+    "required": [
+        "formatted_name"
+    ],
+    "title": "VCard2_1",
+    "type": "object"
+}
